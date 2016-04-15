@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="9rx-4W-ijD">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--LeftVC-->
+        <scene sceneID="UgY-zz-owG">
+            <objects>
+                <tableViewController storyboardIdentifier="LeftSC" id="izT-6B-mgi" customClass="LeftVC" customModule="LazyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6xP-sH-iVU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="jLN-PY-9rw">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jLN-PY-9rw" id="v7W-yv-IeW">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="izT-6B-mgi" id="Yyq-n9-Nwv"/>
+                            <outlet property="delegate" destination="izT-6B-mgi" id="Yg2-gQ-XgF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hH4-q3-AIb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vfd-g4-a91" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-672" y="686"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LazyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q8x-HX-xdr"/>
+                        <viewControllerLayoutGuide type="bottom" id="mZk-g7-Ubd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="469-aH-VGv">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <segue destination="G05-oJ-IUT" kind="modal" id="Na4-0s-zPs"/>
+                                </connections>
+                            </button>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xAz-Cl-C6T">
+                                <rect key="frame" x="0.0" y="-25" width="320" height="548"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mb7-mf-pqV"/>
+                    <connections>
+                        <outlet property="mywebview" destination="xAz-Cl-C6T" id="624-vQ-H1k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="92" y="681"/>
+        </scene>
+        <!--LazyWeather-->
+        <scene sceneID="2ow-rD-go5">
+            <objects>
+                <viewController id="G05-oJ-IUT" customClass="CenterVC" customModule="LazyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6nd-UX-Z8a"/>
+                        <viewControllerLayoutGuide type="bottom" id="ajD-SS-ycz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="uAh-a3-dh3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSW-oW-25l">
+                                <rect key="frame" x="80" y="180" width="160" height="207"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2WC-HR-Khd">
+                                <rect key="frame" x="210" y="72" width="30" height="30"/>
+                                <state key="normal" title="红心"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="fhv-yZ-X6Y"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="LazyWeather" id="gKj-Jc-JnL">
+                        <barButtonItem key="leftBarButtonItem" title="left" id="m8E-b0-xde">
+                            <connections>
+                                <action selector="LeftBtn:" destination="G05-oJ-IUT" id="TU9-mG-xFS"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="right" id="pfj-qg-uFe">
+                            <connections>
+                                <action selector="RightBtn:" destination="G05-oJ-IUT" id="yt9-fs-Z1Y"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="weatherData" destination="bSW-oW-25l" id="HMn-yP-dsd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SC9-X7-Znj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-86" y="-18"/>
+        </scene>
+        <!--RightVC-->
+        <scene sceneID="hoa-C5-R3Q">
+            <objects>
+                <tableViewController storyboardIdentifier="RightSC" id="g8R-aC-PSc" customClass="RightVC" customModule="LazyWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="NcE-Fu-QkS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="x2p-TI-pan">
+                                <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="x2p-TI-pan" id="cF7-U4-PKQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g8R-aC-PSc" id="UMN-3j-olo"/>
+                            <outlet property="delegate" destination="g8R-aC-PSc" id="8gj-aw-v0G"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDa-yN-udQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="686"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rN2-wW-bsp">
+            <objects>
+                <navigationController storyboardIdentifier="CenterSC" automaticallyAdjustsScrollViewInsets="NO" id="9rx-4W-ijD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2yy-7z-FLr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="G05-oJ-IUT" kind="relationship" relationship="rootViewController" id="kJJ-g0-M6e"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pfo-dv-bEs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-533" y="-18"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Na4-0s-zPs"/>
+    </inferredMetricsTieBreakers>
+</document>
